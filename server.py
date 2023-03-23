@@ -15,7 +15,10 @@ def say_hi(name):
 
 @app.route('/repeat/<int:num>/<string:msg>')
 def repeat_msg(num,msg):
-    return msg * num
+    html = ""
+    for i in range(1,num +1):
+        html += f"<h1>{msg}"
+    return html
 
 @app.errorhandler(404) # customize response to particular errors
 def page_not_found(e): # e is the actual error message 
