@@ -1,9 +1,13 @@
-from flask import Flask #import Flask class
+from flask import Flask, render_template #import Flask class
 app = Flask(__name__) # the new instance of Flask is called 'app'
 
 @app.route('/') # names the route for flask framework
-def hello_world():
-    return 'Hello World!'
+def index():
+    return render_template('index.html')
+
+# Original assignment is below:
+# def hello_world():
+#     return 'Hello World!'
 
 @app.route('/dojo') # route named dojo
 def dojo():
