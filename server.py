@@ -14,9 +14,9 @@ def say_hi(name):
     return f"Hi, {name.capitalize()}!" # case corrects proper nouns
 
 @app.route('/repeat/<int:num>/<string:msg>')
-def repeat_msg(num,msg):
+def repeat_msg(num,msg): # return msg * num makes one really long string
     html = ""
-    for i in range(1,num +1):
+    for i in range(1,num +1): # formats each string as html block for readability
         html += f"<h1>{msg}"
     return html
 
